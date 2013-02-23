@@ -8,8 +8,7 @@ Roadmap
 6. Expressions
 7. Filters -> Example
 9. Scope -> Example (Model / Ctrl / Scope)
-10. Example DI
-11. DI
+11. DI -> Example DI
 
 12 Example Directives
 13. Directieves
@@ -19,3 +18,4 @@ Roadmap
 
 Compiler??
 Modules??
+Tests !!!!
