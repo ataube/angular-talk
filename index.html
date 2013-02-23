@@ -85,7 +85,7 @@ Ease of Testing</p>
 						<li>Service Abstraction</li>
 						<li>Directives</li>
 						<li>Expressions</li>
-						<li>Forms</li>
+						<li>Forms (validation)</li>
 						<li>i18n</li>
 						<li>Modules</li>
 						<li>Filters</li>
@@ -99,13 +99,130 @@ Ease of Testing</p>
 					<p>Angular's HTML compiler allows the developer to teach the browser new HTML syntax.</p>
 					<p>The compiler allows you to attach behavior to any HTML element or attribute and even create new HTML element or attributes with custom behavior. Angular calls these behavior extensions directives.</p>
 					<p>Angular comes pre-bundled with common directives which are useful for building any app. We also expect that you will create directives that are specific to your app. These extension become a Domain Specific Language for building your application.</p>
+					<p>Backbone: easy to hard code components together / no reuseability</p>
+					<p>Angular: all basic use cases are taken care off</p>
+					<p>Controller behavior: code behind is free of any dom manipulation. no api calls in controllers, just plain old java objects, easy to integrate with 3td party libraries</p>
+					<p>No String manipulation, DOM transformation</p>
+					<p>Controller: Focus on behavios, no DOM parts in it</p>
+
+				</section>
+
+				
+
+				<section>
+					<section><h2>Data Binding</h2></section>
+
+					<section>
+						<h2>Traditional One-Way Data Binding</h2>
+
+						<img src="/css/images/One_Way_Data_Binding.png" width="500px">
+
+						<p>Usually a static string template gets combined with (model) data, resulting in a new string which is then addd to the DOM.</p>
+					</section>
+
+					<section>
+						<h2>Example 1</h2>
+						<h3><a href="http://localhost:3501/templates/example-0.html" target="_blank">Hello World (BackboneJS)</a></h3>
+					</section>
+
+					<section>
+						<h2>Two-Way Data Binding</h2>
+
+						<img src="/css/images/Two_Way_Data_Binding.png" width="500px">
+
+						<p>
+							Angular compiles directives into a live view combined with a scope model. The result is a continuously updating view which does not need template model re-merging.
+						</p>
+
+						<aside class="notes">
+							<p><strong>No action from the developer is needed to update the view.</strong></p>
+							<p>The code can get hold of the elements and register event handlers and know that the reference will not be destroyed by template data merge.</p>
+						</aside>
+
+					</section>
+
+					<!-- <section>
+						<h2>Comparison</h2>
+
+						<img src="/css/images/concepts-view.png" width="600px">
+					</section> -->
+
+					<section>
+						<h2>Example 2</h2>
+						<h3><a href="http://localhost:3501/templates/example-0.html" target="_blank">Hello World (AngularJS)</a></h3>
+					</section>
 
 				</section>
 
 				<section>
-					<h2>Example:</h2>
-					<h3><a href="http://localhost:3501/templates/hello_angular.html" target="_blank">Hello AngularJS</a></h3>
+					<section><h2>Expressions and Filters</h2></section>
+
+					<section>
+						<h2>Expressions</h2>
+
+						<p>Expressions are JavaScript-like code snippets that are usually placed in bindings such as <b>{{ expression }}</b>. They are mostly used in views as HTML markup.</p>
+
+						<pre>
+							<code>
+1+2
+
+"text".toUpperCase()
+
+myModel.myProperty
+							</code>
+						</pre>
+
+					</section>
+
+					<section>
+						<h2>Filters</h2>
+
+						<ul>
+							<li>Used to convert raw data into a user-friendly (readable) format.</li>
+							<li>Can be chained by pipes like in bash.</li>
+							<li>May accept arguments.</li>
+						</ul>
+						<p> 
+
+						<pre>
+							<code>
+value | filter1 | filter2
+
+123 | number:2
+							</code>
+						</pre>
+
+					</section>
+
+					<section>
+						<h2>Example 3</h2>
+						<h3><a href="http://localhost:3501/templates/two-way-binding.html" target="_blank">Expressions and Filters</a></h3>
+					</section>
+
 				</section>
+
+				
+
+				<section>
+
+					<h2>Compiler</h2>
+
+					
+
+				</section>
+
+				<section>
+
+					<h2>Scope</h2>
+
+				</section>
+
+				<section>
+
+					<h2>Example:</h2>
+					<h3><a href="">Model-View-Controller</a></h3>
+
+				</section>	
 
 				<section>
 
@@ -132,68 +249,7 @@ Ease of Testing</p>
 
 				</section>
 
-				<section>
-					<section><h2>Data Binding</h2></section>
 
-					<section>
-						<h2>Traditional One-Way Data Binding</h2>
-
-						<img src="/css/images/One_Way_Data_Binding.png" width="500px">
-
-						<p>Usually a static string template gets combined with (model) data, resulting in a new string which is then addd to the DOM.</p>
-					</section>
-
-					<section>
-						<h2>Two-Way Data Binding</h2>
-
-						<img src="/css/images/Two_Way_Data_Binding.png" width="500px">
-
-						<p>
-							Angular compiles directives into a live view combined with a scope model. The result is a continuously updating view which does not need template model re-merging.
-						</p>
-
-
-
-						<aside class="notes">
-							<p><strong>No action from the developer is needed to update the view.</strong></p>
-							<p>The code can get hold of the elements and register event handlers and know that the reference will not be destroyed by template data merge.</p>
-						</aside>
-
-					</section>
-
-					<section>
-						<h2>Comparison</h2>
-
-						<img src="/css/images/concepts-view.png" width="600px">
-					</section>
-
-				</section>
-
-				<section>
-					<h2>Example:</h2>
-					<h3><a href="http://localhost:3501/templates/two-way-binding.html" target="_blank">Two-Way-Data-Binding</a></h3>
-				</section>
-
-				<section>
-
-					<h2>Compiler</h2>
-
-					
-
-				</section>
-
-				<section>
-
-					<h2>Scope</h2>
-
-				</section>
-
-				<section>
-
-					<h2>Example:</h2>
-					<h3><a href="">Model-View-Controller</a></h3>
-
-				</section>	
 
 
 				<section>

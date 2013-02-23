@@ -1,0 +1,21 @@
+Roadmap
+========
+
+1. What is Angular?
+2. Benefits
+3. Features
+5. Data Binding -> Example (Angular vs Backbone)
+6. Expressions
+7. Filters -> Example
+9. Scope -> Example (Model / Ctrl / Scope)
+10. Example DI
+11. DI
+
+12 Example Directives
+13. Directieves
+
+14. Conclusion 
+  - Advantage / Disatvantage Single Page APPS
+
+Compiler??
+Modules??
