@@ -48,7 +48,7 @@
 				<section>
 					<h2>What is Angular.js?</h2>
 					<ul>
-						<li>A lightweight framework which teaches the browser new tricks!</li>
+						<li>A lightweight (meta) framework which teaches the browser new tricks!</li>
 						<li>100% JavaScript, 100% client side and compatible with both desktop and mobile browsers.</li>
 						<li>Multi-Browser Support: <br>Safari, Chrome, Firefox, Opera, IE8, IE9 <br> Android, Chrome Mobile, iOS Safari.</li>
 						<li>File size < 29KB (compressed)</li>
@@ -58,23 +58,18 @@
 				</section>
 
 				<section>
-					<h2>Benifits</h2>
+					<h2>Benefits</h2>
 
-					<p>It works with the long-established technologies of the web (HTML, CSS, and JavaScript) to make the development of web apps easier and faster than ever before.</p>
-
-					<p>Simplifies: DOM Manipulation, Setting Up Listeners and Notifiers and Input Validation</p>
-
-					<p>Because Angular handles much of the work involved in these tasks, developers can concentrate more on application logic and less on repetitive, error-prone, lower-level coding.</p>
-
-					<p>Separation of data, application logic, and presentation components
-Data Binding between data and presentation components
-Services (common web app operations, implemented as substitutable objects)
-Dependency Injection (used primarily for wiring together services)
-An extensible HTML compiler (written entirely in JavaScript)
-Ease of Testing</p>
-
-					<p>develop both single-page and round-trip apps</p>
-					<p>Test friendly</p>
+					<ul>
+						<li>Makes development of web apps extremely easy and fast.</li>
+						<li>Clear seperation of application logic, presentation components and service layers.</li>
+						<li>Extremely test friendly.</li>
+						<li>Strong reusability by extending HTML with custom DSL.</li>
+						<li>Rich feature set with very common use cases taken care off.</li>
+						<li>No angular specifiy API calls required -> easy intergration with 3rd party libraries.</li>
+						<li>Suitable for single-page and rount-trip apps / integration projects.</li>
+						<li>Good documentation + strong community support (Google)</li>
+					</ul>
 
 				</section>
 
@@ -96,20 +91,6 @@ Ease of Testing</p>
 				</section>
 
 				<section>
-					<h2>TODO</h2>
-					<p>Angular's HTML compiler allows the developer to teach the browser new HTML syntax.</p>
-					<p>The compiler allows you to attach behavior to any HTML element or attribute and even create new HTML element or attributes with custom behavior. Angular calls these behavior extensions directives.</p>
-					<p>Angular comes pre-bundled with common directives which are useful for building any app. We also expect that you will create directives that are specific to your app. These extension become a Domain Specific Language for building your application.</p>
-					<p>Backbone: easy to hard code components together / no reuseability</p>
-					<p>Angular: all basic use cases are taken care off</p>
-					<p>Controller behavior: code behind is free of any dom manipulation. no api calls in controllers, just plain old java objects, easy to integrate with 3td party libraries</p>
-					<p>No String manipulation, DOM transformation</p>
-					<p>Controller: Focus on behavios, no DOM parts in it</p>
-
-
-				</section>
-
-				<section>
 					<section><h2>Data Binding</h2></section>
 
 					<section>
@@ -122,7 +103,7 @@ Ease of Testing</p>
 
 					<section>
 						<h2>Example 1</h2>
-						<h3><a href="http://localhost:3501/templates/example-1a.html" target="_blank">Hello World (BackboneJS)</a></h3>
+						<h3><a href="http://localhost:3501/templates/example-1.html" target="_blank">Hello World (BackboneJS)</a></h3>
 					</section>
 
 					<section>
@@ -149,7 +130,7 @@ Ease of Testing</p>
 
 					<section>
 						<h2>Example 2</h2>
-						<h3><a href="http://localhost:3501/templates/example-1b.html" target="_blank">Hello World (AngularJS)</a></h3>
+						<h3><a href="http://localhost:3501/templates/example-2.html" target="_blank">Hello World (AngularJS)</a></h3>
 					</section>
 
 				</section>
@@ -192,11 +173,15 @@ value | filter1 | filter2
 							</code>
 						</pre>
 
+						<ul>
+							<li>Available filters: <br><code>currency, date, filter, json, limitTo, lowercase, uppercase, number, orderBy</code></li>
+						</ul>
+
 					</section>
 
 					<section>
 						<h2>Example 3</h2>
-						<h3><a href="http://localhost:3501/templates/two-way-binding.html" target="_blank">Expressions and Filters</a></h3>
+						<h3><a href="http://localhost:3501/templates/example-3.html" target="_blank">Expressions and Filters</a></h3>
 					</section>
 
 				</section>
@@ -212,7 +197,7 @@ value | filter1 | filter2
 						<ul>
 							<li>View: HTML (declarative)</li>
 							<li>Scope: Glue between view and controller.</li>
-							<li>Controller: JavaScript (imperative)</li>
+							<li>Controller: JavaScript (imperative) <br><small>No DOM manipulation, no Angular specific api calls.</small></li>
 						</ul>
 
 						<img src="/css/images/concepts-controller.png" width="700px">
@@ -234,7 +219,7 @@ value | filter1 | filter2
 					<section>
 
 						<h2>Example 4</h2>
-						<h3><a href="http://localhost:3501/templates/two-way-binding.html" target="_blank">View-Scope-Controller</a></h3>
+						<h3><a href="http://localhost:3501/templates/example-4.html" target="_blank">View-Scope-Controller</a></h3>
 
 					</section>
 
@@ -242,33 +227,53 @@ value | filter1 | filter2
 
 				<section>
 
-					<h2>Dependency Injection</h2>
+					<section><h2>Dependency Injection / Services</h2></section>
+
+					<section>
+						
+						<h2>Example 5</h2>
+						<h3><a href="http://localhost:3501/templates/example-5.html" target="_blank">Dependency Injection / Services</a></h3>
+
+					</section>
 
 				</section>
 				
 
 				<section>
 
-					<h2>Directives</h2>
+					<section><h2>Directives</h2></section>
 
-					<ul>
-						<li>Extend the HTML vocabulary in a declarative way.</li>
-						<li>Attach behavior to any HTML element or attribute.</li>
-						<li>Create new HTML elements or attributes with custom behavior (DSL).</li>
-					</ul>
-					<pre>
-						<code>
-&lt;span ng-form=&quot;exp&quot;&gt;&lt;/span&gt;
-&lt;span class=&quot;ng-form: exp;&quot;&gt;&lt;/span&gt;
-&lt;ng-form&gt;&lt;/ng-form&gt;
-&lt;!-- directive: ng-form exp --&gt;
-						</code>
-					</pre>
-					<p>Angular provides a set of pre defined directives which are usefull for building web apps. They all use the <strong>ng</strong>-prefix.</p>
+					<section>
+						<h2>Directives</h2>
 
-					<aside class="notes">
-						A directive is just a function which executes when the compiler encounters it in the DOM.
-					</aside>
+						<ul>
+							<li>Extend the HTML vocabulary in a declarative way.</li>
+							<li>Attach behavior to any HTML element or attribute.</li>
+							<li>Create new HTML elements or attributes with custom behavior (DSL).</li>
+						</ul>
+						<pre>
+							<code>
+	&lt;span ng-form=&quot;exp&quot;&gt;&lt;/span&gt;
+	&lt;span class=&quot;ng-form: exp;&quot;&gt;&lt;/span&gt;
+	&lt;ng-form&gt;&lt;/ng-form&gt;
+	&lt;!-- directive: ng-form exp --&gt;
+							</code>
+						</pre>
+						<p>Angular provides a set of pre defined directives which are usefull for building web apps. They all use the <strong>ng</strong>-prefix.</p>
+
+						<aside class="notes">
+							A directive is just a function which executes when the compiler encounters it in the DOM.
+						</aside>
+					</section>
+
+					<!-- <section>
+						<h2>Compiler</h2>
+
+						<p>Angular's HTML compiler allows the developer to teach the browser new HTML syntax.</p>
+						<p>The compiler allows you to attach behavior to any HTML element or attribute and even create new HTML element or attributes with custom behavior. Angular calls these behavior extensions directives.</p>
+
+
+					</section> -->
 
 				</section>
 
@@ -326,9 +331,39 @@ value | filter1 | filter2
 
 				</section> -->
 
+				<section>
 
+					<section>
+						<h2>Summary</h2>
+					</section>
 
-				
+					<section>
+						<h2>Pros</h2>
+
+						<ul>
+							<li>Suitable for small and big development projects.</li>
+							<li>Bidirectional data binding.</li>
+							<li>Clear seperation of concerncs -> easy testability!</li>
+							<li>HTML can be extended with custom DSL -> great for reuseability!</li>
+							<li>No dependecy on 3rd party libraries.</li>
+							<li>Add-on projects i.e. <a href="http://angular-ui.github.com" target="_blank">angular-ui</a>, <a href="http://angular-ui.github.com/bootstrap/" target="_blank">angular-bootstrap-ui</a>, etc...</li>
+						</ul>
+
+					</section>
+
+					<section>
+
+						<h2>Cons</h2>
+
+						<ul>
+							<li>Many new concepts which are hard to understand (in the fist moment) coming from jQuery like app development.</li>
+							<li>Steep learning curve.</li>
+							<li>Complex data bindings might cause performance issues (>1000 bindings on one page)</li>
+						</ul>
+
+					</section>
+
+				</section>
 
 
 				<!-- Example of nested vertical slides -->
