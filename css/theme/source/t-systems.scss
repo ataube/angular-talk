@@ -20,13 +20,13 @@
 $backgroundColor: white;
 
 $mainFont: 'Open Sans', Times, 'Times New Roman', serif;
-$linkColor: #e7ad52;
+$linkColor: #E20076;
 $linkColorHover: lighten( $linkColor, 20% );
 $headingFont: 'Montserrat', Impact, sans-serif;
 $headingTextShadow: none;
 $headingLetterSpacing: -0.03em;
 $headingTextTransform: none;
-$selectionBackgroundColor: #e7ad52;
+$selectionBackgroundColor: #E20076;
 $mainFontSize: 30px;
 
 
@@ -51,4 +51,19 @@ $mainFontSize: 30px;
 
 .reveal code {
   font-size: 20px;
+}
+
+.reveal section h2 {
+	color: #E20076
+}
+
+.blackout .reveal .state-background {
+	background: rgba( 0,0,0,.7 );
+}
+
+.t-systems-logo {
+    bottom: 0px;
+    position: fixed;
+    left: 20px;
+    width: 90%;
 }
